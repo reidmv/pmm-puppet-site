@@ -1,0 +1,28 @@
+#!/bin/bash
+server_name=<%= @server_name %>
+master_ip=<%= @master_ip %>
+master_host=<%= @master_host %>
+
+function setup_networking {
+  echo "$server_name" > /etc/hostname
+  hostname $server_name
+  echo "127.0.0.1 $server_name localhost.localdomain localhost" > /etc/hosts
+  echo "$master_ip $master_host puppet" >> /etc/hosts
+}
+
+function install_prereqs {
+  apt install -y curl
+}
+
+
+function install_pe_puppetagent {
+  sudo mkdir -p /etc/puppetlabs/puppet
+  sudo echo '[agent]' >> /etc/puppetlabs/puppet/puppet.conf
+  sudo echo "server = puppet" >> /etc/puppetlabs/puppet/puppet.conf
+  curl -k https://$master_host:8140/packages/current/install.bash | sudo bash
+  sudo service puppet start
+}
+
+    setup_networking
+    install_prereqs
+    install_pe_puppetagent

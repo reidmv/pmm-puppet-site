@@ -65,3 +65,6 @@ mod 'badgerious/windows_env', '2.2.2'
 mod 'chocolatey/chocolatey', '1.2.6'
 
 mod 'garethr/docker'
+mod 'puppetlabs/azure'
+mod 'puppet/nodejs'
+mod 'treydock/gpg_key'
