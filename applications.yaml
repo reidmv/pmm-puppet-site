@@ -43,8 +43,8 @@ rgbank_docker:
         use_docker: true
       components:
         Rgbank::Web:
-          - docker1.vm
-          - docker2.vm
+          - docker1
+          - docker2
         Rgbank::Db:
           - database.vm
         Rgbank::Load:
