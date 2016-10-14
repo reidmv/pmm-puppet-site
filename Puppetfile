@@ -73,3 +73,8 @@ mod 'windows_ad',
 mod 'puppetlabs-mount_iso', '0.1.0'
 mod 'cyberious-pget', '1.1.0'
 mod 'trlinkin/domain_membership', '1.1.1'
+
+# Cloud Demo Modules
+mod 'puppetlabs/azure', '1.0.3'
+mod 'puppet/nodejs'
+mod 'treydock/gpg_key'
