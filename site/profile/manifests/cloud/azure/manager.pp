@@ -22,4 +22,5 @@ class profile::cloud::azure::manager {
   client_secret: \"${client_secret}\"
 }"
 
+  }
 }
