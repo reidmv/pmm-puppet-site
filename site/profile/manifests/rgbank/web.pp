@@ -1,5 +1,5 @@
 class profile::rgbank::web (
-  $use_docker = false
+  $use_docker = false,
   $db_name,
   $db_host,
   $db_user,
