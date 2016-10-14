@@ -1,10 +1,10 @@
 define profile::cloud::azure::linux (
   $server_name = $name,
   $port        = '80',
-  $master_ip   = '40.122.40.252',
-  $master_host = 'master-jamesjones-puppetconf.nwg5gle4glnunglfn3lvntwiqh.gx.internal.cloudapp.net',
+  $master_ip   = '52.39.72.238',
+  $master_host = 'ip-172-31-6-59.us-west-2.compute.internal',
   $agent_role  = 'baseline',
-  $deployment  = '1681',
+  $deployment  = '1682',
 ){
   azure_vm_classic { $server_name:
     ensure          => 'running',
