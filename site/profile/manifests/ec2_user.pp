@@ -12,4 +12,9 @@ class profile::ec2_user {
     key   => 'AAAAB3NzaC1yc2EAAAADAQABAAACAQDMlV83Evx6LhGFJ+hWKekION/ANE0E1gbNSWaonT5dqGjzR/AzUraacr5VT7duvQ25fhOTvn7z/xbIsIFRn0pTN45L1v7sRuErcM3jD8KCoUtyon85+gZlqnapKFbqx2ESAIt9cCqGabr3ITUB9Z10mjzfI1r/NX8C/o/8NwXSIkytpA2OVh8jikaDg2sfLmD7Tt0CVUO3+QWVajY7nrIq42umNSEMWcy8wnLyz1l+WyCcTa6s56ouYtF4U5luRHRQuD3TNeBMu+mipocXFZ8ldcpFs5tOYTxTZv/riX81XaODRysW9JTO59pwJ4zImM+RxgWa9zLIzwAqd852j9PmZnh72y5oIXAq4HYzBN7NIjCRdQntlGWATBhN2c2h+UqevKTF8D3CRFxI5nCuoIE5FeHGySnueez07iCK3MiSjGmU9pbj2vu7DoJGnIyVHzY/rGsPVLHKMyHmPwaKyGXlK4kcksval2u5ayTXeLJfD5Z/w2lhz3Y/os+jBzdo3gr7J3OpyjC4f3HKandX4TE/MGsabz6IxL0VVL0yuztAH5MOi044VCOSNmXleAtB0Ls2HwaYSV3WlNyA+Ro9p01dbARTfkC6mUXftpzxfwbcFKwhW8UMhgFM1b0yKeCbMF1s5qaQBscRXNz7zKHLBe/fXBvuFm87D8m1Th+8Jmm29Q==',
   }
 
+  ssh_authorized_key { 'carl@puppetlabs.com':
+    user  => 'ec2-user',
+    type  => 'ssh-rsa',
+    key   => 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6fktwru7Ff0yJa8EZeWpLVNZL17OGddvgQgfWnde+43cRZ2UBHc0oiigSjeRJIpe30vYOUUmA4SAPBoBCw05KPI3WCD9kCQmqHIicROyVnR9Prv1sieCkkbJjWkEx4d6xWDZA5giAnHWND92nSe91sEI08GNqP3YK+HHaJJu6ZzWi5Yv9Mxpg2FkneToOaMIi2Vr03Qmga6IBAL1qUfKlYeGpFiY7wp+0XLIgAsf1SQOu+JwIaZJNcTXTDCSTqJZuJw0DqIzgpVxCXqujnNylyggDh1SCleRtQkRlqszvITBusaP0+AnQ5QdlQW5cEzuJsB0b29rvdWwThkVqq0f2Q==',
+
 }
