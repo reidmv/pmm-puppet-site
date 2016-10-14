@@ -15,12 +15,14 @@ class profile::cloud::azure::example (
     port       => '8060',
     agent_role => 'webserver',
     deployment => $deployment,
+    cluster    => $cluster,
   }
   
   profile::cloud::azure::linux { 'dbserver':
     port       => '3306',
     agent_role => 'dbserver',
     deployment => $deployment,
+    cluster    => $cluster,
   }
 
 }
