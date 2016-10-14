@@ -1,6 +1,6 @@
 class profile::cloud::azure::example (
-  $deployment = '1684',
-  $cluster    = '1684',
+  $deployment = '1685',
+  $cluster    = '1685',
 )
 {
 
