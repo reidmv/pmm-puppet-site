@@ -17,6 +17,13 @@ class profile::common {
     'RedHat': {
       include epel
     }
+    'Debian': {
+      include apt
+      apt::conf { 'unauth':
+        priority  => 99,
+        content => 'APT::Get::AllowUnauthenticated 1;'
+      }
+    }
   }
 
   if $::kernel == 'Linux' {
