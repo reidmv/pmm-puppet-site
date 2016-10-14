@@ -5,6 +5,7 @@ $compliance_profile = 'stig'
 include ::auditd
 #include ::iptables
 #include ::ssh
-include ::pki
+#include ::pki
+include ::sudo
 
 }
