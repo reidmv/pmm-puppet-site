@@ -23,7 +23,7 @@ extension_requests:
     pp_role:  $role
 YAML
   echo '[agent]' >> /etc/puppetlabs/puppet/puppet.conf
-  echo "server = puppet" >> /etc/puppetlabs/puppet/puppet.conf
+  echo "server = ip-172-31-6-59.us-west-2.compute.internal" >> /etc/puppetlabs/puppet/puppet.conf
   curl -k https://puppet:8140/packages/current/install.bash | bash
   service puppet start
 }
