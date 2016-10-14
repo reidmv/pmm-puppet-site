@@ -5,6 +5,8 @@ define profile::cloud::azure::linux (
   $master_host = 'ip-172-31-6-59.us-west-2.compute.internal',
   $agent_role  = 'baseline',
   $deployment  = '1683',
+  $application = 'rgbank',
+  $cluster     = 'default',
 ){
   azure_vm_classic { $server_name:
     ensure          => 'running',

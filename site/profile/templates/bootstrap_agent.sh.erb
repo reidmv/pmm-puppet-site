@@ -3,6 +3,8 @@ server_name=$(hostname)
 master_ip=<%= @master_ip %>
 master_host=<%= @master_host %>
 role=<%= @agent_role %>
+cluster=<%= @cluster %>
+application= <%= @application %>
 
 function setup_networking {
   echo "$server_name" > /etc/hostname
@@ -21,6 +23,8 @@ function install_pe_puppetagent {
   cat > /etc/puppetlabs/puppet/csr_attributes.yaml << YAML
 extension_requests:
     pp_role:  $role
+    pp_application: $application
+    pp_cluster: $cluster
 YAML
   echo '[agent]' >> /etc/puppetlabs/puppet/puppet.conf
   echo "server = ip-172-31-6-59.us-west-2.compute.internal" >> /etc/puppetlabs/puppet/puppet.conf
