@@ -7,7 +7,7 @@ class profile::rgbank::web (
 ) {
 
   rgbank::web { "web-app":
-    db_name     => $db_name,
+    db_name     => "rgbank-${db_name}",
     db_host     => $db_host,
     db_user     => $db_user,
     db_password => $db_password,
