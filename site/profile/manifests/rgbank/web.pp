@@ -5,6 +5,7 @@ class profile::rgbank::web (
   $db_user,
   $db_password,
 ) {
+  include nginx::config
   rgbank::web { "web-app":
     db_name     => $db_name,
     db_host     => $db_host,
