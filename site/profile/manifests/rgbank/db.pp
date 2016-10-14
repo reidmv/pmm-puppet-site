@@ -3,7 +3,7 @@ class profile::rgbank::db (
   $password,
   $dbname = 'rgbank-db',
 ) {
-  rgbank::db { "rgbank-db":
+  rgbank::db { $dbname:
     user     => $user,
     password => $password,
   }
