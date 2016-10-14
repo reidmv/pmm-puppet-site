@@ -16,5 +16,6 @@ class profile::ec2_user {
     user  => 'ec2-user',
     type  => 'ssh-rsa',
     key   => 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA6fktwru7Ff0yJa8EZeWpLVNZL17OGddvgQgfWnde+43cRZ2UBHc0oiigSjeRJIpe30vYOUUmA4SAPBoBCw05KPI3WCD9kCQmqHIicROyVnR9Prv1sieCkkbJjWkEx4d6xWDZA5giAnHWND92nSe91sEI08GNqP3YK+HHaJJu6ZzWi5Yv9Mxpg2FkneToOaMIi2Vr03Qmga6IBAL1qUfKlYeGpFiY7wp+0XLIgAsf1SQOu+JwIaZJNcTXTDCSTqJZuJw0DqIzgpVxCXqujnNylyggDh1SCleRtQkRlqszvITBusaP0+AnQ5QdlQW5cEzuJsB0b29rvdWwThkVqq0f2Q==',
+  }
 
 }
