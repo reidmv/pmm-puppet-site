@@ -3,6 +3,7 @@ class role::rgbank::db {
   include profile::mysql::server
 
   class { 'profile::rgbank::db':
+    name     => 'rgbank',
     user     => 'rgbank',
     password => 'rgbankPassw0rd',
   }
