@@ -4,6 +4,12 @@ class profile::apache(
   class { 'apache':
     default_vhost => $default_vhost,
   }
-
-  class { 'apache::mod::php': }
+  if $::osfamily == 'Debian' {
+    class { 'apache::mod::php':
+      php_version => '7',
+    }
+  }
+  else {
+    class { 'apache::mod::php': }
+  }
 }
