@@ -8,7 +8,7 @@ class profile::cloud::azure::example (
     port       => '8060',
     agent_role => 'rgbank_monolithic',
     deployment => $deployment,
-    cluster    => $cluster,
+    cluster    => "${cluster}-monolithic",
   }
 
   profile::cloud::azure::linux { 'webserver':
