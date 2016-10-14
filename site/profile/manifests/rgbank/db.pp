@@ -1,7 +1,7 @@
 class profile::rgbank::db (
   $user,
   $password,
-  $name = 'rgbank-db',
+  $dbname = 'rgbank-db',
 ) {
   rgbank::db { "rgbank-db":
     user     => $user,
