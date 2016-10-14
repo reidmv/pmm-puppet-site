@@ -5,6 +5,7 @@ class role::rgbank::web {
 
   class { 'profile::rgbank::web':
     db_name     => 'rgbank',
+    db_user     => 'rgbank',
     db_password => 'rgbankPassw0rd',
     db_host     => puppetdb_query("facts[value] {
                                     name = \"ipaddress\" and certname in inventory[certname] {
