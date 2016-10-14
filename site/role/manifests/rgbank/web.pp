@@ -2,5 +2,17 @@ class role::rgbank::web {
   include profile::common
   include profile::apache
   include profile::mysql::client
-  include profile::rgbank::web
+
+  class { 'profile::rgbank::web':
+    db_name     => 'rgbank',
+    db_password => 'rgbankPassw0rd',
+    db_host     => puppetdb_query("facts[value] {
+                                     name = \"ipaddress\" and certname in inventory[certname] {
+                                       trusted.extensions.pp_application = \"${trusted['extensions']['pp_application']}\" and
+                                       trusted.extensions.pp_cluster = \"${trusted['extensions']['pp_cluster']}\" and
+                                       trusted.extensions.pp_role = \"DatabaseNode\"
+                                     }
+                                   }")[0]['value'],
+  }
+
 }
