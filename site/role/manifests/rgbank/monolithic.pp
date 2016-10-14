@@ -1,6 +1,6 @@
 class role::rgbank::monolithic {
   include profile::common
-  include profile::apache
+  include profile::nginx
   include profile::mysql::client
   include profile::mysql::server
   #  include profile::rgbank::db

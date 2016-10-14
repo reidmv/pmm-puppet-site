@@ -1,6 +1,6 @@
 class role::rgbank::web {
   include profile::common
-  include profile::apache
+  include profile::nginx
   include profile::mysql::client
 
   class { 'profile::rgbank::web':
