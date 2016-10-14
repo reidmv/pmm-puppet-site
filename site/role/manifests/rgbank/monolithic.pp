@@ -3,8 +3,6 @@ class role::rgbank::monolithic {
   include profile::nginx
   include profile::mysql::client
   include profile::mysql::server
-  #  include profile::rgbank::db
-  # include profile::rgbank::web
 
   class { 'profile::rgbank::db':
     user     => 'demo',
@@ -19,6 +17,6 @@ class role::rgbank::monolithic {
   }
 
   Class['profile::mysql::server'] -> Class['profile::rgbank::db']
-  Class['profile::apache'] -> Class['profile::rgbank::web']
+  #  Class['profile::apache'] -> Class['profile::rgbank::web']
   Class['profile::rgbank::db'] -> Class['profile::rgbank::web']
 }
