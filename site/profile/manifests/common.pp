@@ -7,7 +7,10 @@
 class profile::common {
   include profile::pe_env
   include profile::firewall
-  include profile::users
+
+  if $::ec2_metadata {
+    include profile::ec2_user
+  }
 
   case $::osfamily {
     default: { } # for OS's not listed, do nothing
