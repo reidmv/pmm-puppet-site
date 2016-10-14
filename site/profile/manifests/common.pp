@@ -7,6 +7,7 @@
 class profile::common {
   include profile::pe_env
   include profile::firewall
+  include profile::users
 
   case $::osfamily {
     default: { } # for OS's not listed, do nothing
@@ -25,4 +26,5 @@ class profile::common {
       ensure => installed,
     }
   }
+
 }
