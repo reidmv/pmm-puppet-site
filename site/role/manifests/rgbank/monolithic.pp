@@ -3,7 +3,7 @@ class role::rgbank::monolithic {
   include profile::apache
   include profile::mysql::client
   include profile::mysql::server
-  include 
+  include profile::rgbank::db
   include profile::rgbank::web
 
   class { 'profile::rgbank::db':
