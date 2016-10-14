@@ -35,7 +35,7 @@ mod 'puppetlabs/ciscopuppet', '1.0.0'
 # mod 'puppetlabs/satellite_pe_tools', '1.0.0'
 mod 'puppetlabs/haproxy', '1.5.0'
 mod 'tse/to_resource', '0.1.2'
-mod 'puppetlabs/vsphere'
+#mod 'puppetlabs/vsphere'
 
 mod 'app_modeling',
   :git => 'https://github.com/puppetlabs/puppetlabs-app_modeling'
@@ -69,7 +69,7 @@ mod 'garethr/docker'
 
 mod 'windows_ad',
   :git => 'https://github.com/glennsarti/glennsarti-windows_ad'
-mod 'puppetlabs-sqlserver', '1.1.4'
+#mod 'puppetlabs-sqlserver', '1.1.4'
 mod 'puppetlabs-mount_iso', '0.1.0'
 mod 'cyberious-pget', '1.1.0'
 mod 'trlinkin/domain_membership', '1.1.1'
