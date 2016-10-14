@@ -2,7 +2,8 @@ class profile::stig_baseline {
 
 $compliance_profile = 'stig'
 
-include auditd
-include ssh
+include ::auditd
+include ::iptables
+include ::ssh
 
 }
