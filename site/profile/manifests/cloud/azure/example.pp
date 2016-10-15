@@ -5,14 +5,14 @@ class profile::cloud::azure::example (
 {
 
   profile::cloud::azure::linux { 'monolithic1':
-    port       => '8060',
+    port       => '80',
     agent_role => 'rgbank_monolithic',
     deployment => $deployment,
     cluster    => "${cluster}-monolithic",
   }
 
   profile::cloud::azure::linux { 'webserver1':
-    port       => '8060',
+    port       => '80',
     agent_role => 'webserver',
     deployment => $deployment,
     cluster    => $cluster,
