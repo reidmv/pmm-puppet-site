@@ -12,5 +12,6 @@ class profile::rgbank::web (
     db_user     => $db_user,
     db_password => $db_password,
     use_docker  => $use_docker,
+    listen_port => '80',
   }
 }
