@@ -4,4 +4,9 @@ class profile::remi {
     provider => 'rpm',
     ensure   => installed,
   }
+
+  yumrepo { 'remi':
+    enabled => 1,
+    require => Package['remi-release'],
+  }
 }
