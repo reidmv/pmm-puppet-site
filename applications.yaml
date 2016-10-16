@@ -5,7 +5,7 @@ dev:
       components:
         ['Rgbank::Web','Rgbank::Db', 'Rgbank::Load']:
           - rgbank-dev.vm
-puppetconf_header:
+rgbank_vcsrepo_rename:
   rgbank:
     dev-0:
       components:
