@@ -41,8 +41,7 @@ mod 'herculesteam-augeasproviders',
   :git => 'https://github.com/simp/augeasproviders'
 
 mod 'herculesteam-augeasproviders_apache',
-  :git => 'https://github.com/simp/augeasproviders_apache',
-  :ref => 'd348d706a742b7a89c202e4e5965c9094706b23d'
+  :git => 'https://github.com/simp/augeasproviders_apache'
 
 mod 'herculesteam-augeasproviders_base',
   :git => 'https://github.com/simp/augeasproviders_base'
@@ -60,8 +59,7 @@ mod 'herculesteam-augeasproviders_nagios',
   :git => 'https://github.com/simp/augeasproviders_nagios'
 
 mod 'herculesteam-augeasproviders_pam',
-  :git => 'https://github.com/simp/augeasproviders_pam',
-  :ref => '069cd40f663464b4bc1c77280cb8c3a6beda5f26'
+  :git => 'https://github.com/simp/augeasproviders_pam'
 
 mod 'herculesteam-augeasproviders_postgresql',
   :git => 'https://github.com/simp/augeasproviders_postgresql'
@@ -115,7 +113,8 @@ mod 'simp-aide',
   :git => 'https://github.com/simp/pupmod-simp-aide'
 
 mod 'simp-apache',
-  :git => 'https://github.com/simp/pupmod-simp-apache'
+  :git => 'https://github.com/simp/pupmod-simp-apache',
+  :ref => 'f7ad73443287e3348d599346ee5a7c190adfb81e'
 
 mod 'simp-auditd',
   :git => 'https://github.com/simp/pupmod-simp-auditd'
