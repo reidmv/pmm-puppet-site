@@ -8,7 +8,7 @@ class profile::pci_demo::mysql_base_install (
 ){
   class { '::mysql::server':
     create_root_user        => true,
-    root_password           => $mysql_root_password,
+    root_password           => Sensitive(hiera($mysql_root_password)),
     remove_default_accounts => true,
   }
 
