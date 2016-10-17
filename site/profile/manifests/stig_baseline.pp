@@ -1,5 +1,11 @@
 class profile::stig_baseline {
 
-include auditd
+$compliance_profile = 'stig'
+
+include ::auditd
+#include ::iptables
+#include ::ssh
+#include ::pki
+include ::sudo
 
 }
