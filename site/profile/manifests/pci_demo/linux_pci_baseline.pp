@@ -68,6 +68,6 @@ class profile::pci_demo::linux_pci_baseline (
 
   ###SIMP Module from forge
 
-  include aide
+  #include aide
 
 }
