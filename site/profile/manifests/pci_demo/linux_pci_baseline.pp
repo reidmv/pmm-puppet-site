@@ -6,13 +6,8 @@ class profile::pci_demo::linux_pci_baseline (
  ##PCI Examples: Build and maintain a Secure Network##
  #####################################################
 
-  ###Enable firewall service and enforce running state
-  service { 'firewalld':
-    ensure    => running,
-    enable    => true,
-    hasstatus => true,
-    noop      => $checking,
-  }
+  ###Enable firewall rules
+  class { 'profile::pci_demo::firewall': } 
  
   ###Enable hardened SSH
   #class { 'ssh_hardening': }
