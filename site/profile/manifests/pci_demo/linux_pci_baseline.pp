@@ -20,7 +20,7 @@ class profile::pci_demo::linux_pci_baseline (
   file_line { 'PermitRootLogin':
     path  => '/etc/ssh/sshd_config',
     line  => 'PermitRootLogin no',
-    match => 'PermitRootLogin',
+    match => '^PermitRootLogin',
     noop  => $checking,
   }
 
