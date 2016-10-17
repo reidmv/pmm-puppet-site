@@ -66,7 +66,8 @@ class profile::pci_demo::linux_pci_baseline (
 
   ###Install, configure, and maintain tools that do this for you using modules available on the Puppet Forge
 
-  #SIMP Module
+  #SIMP Module from forge
+
   include aide
 
 }
