@@ -19,8 +19,7 @@ mod 'simp-doc',
   :git => 'https://github.com/simp/simp-doc'
 
 mod 'simp-rsync',
-  :git => 'https://github.com/simp/simp-rsync',
-  :ref => '994c030814ce50989e93221eb8dd1a3d0d59af82'
+  :git => 'https://github.com/simp/simp-rsync'
 
 mod 'rubygem-simp_cli',
   :git => 'https://github.com/simp/rubygem-simp-cli'
