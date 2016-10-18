@@ -53,7 +53,12 @@ class profile::pci_demo::linux_pci_baseline (
   ###Maintain up to date versions of selected vulnerability management software using modules available
   ###on the Puppet Forge
 
-  include clamav
+  class { 'clamav':
+    manage_clamd             => true,
+    manage_freshclam         => true,
+    clamd_service_ensure     => 'running',
+    freshclam_service_ensure => 'stopped',
+  }
 
   ####################################################
   ##PCI Example: Regularly Monitor and Test Networks##
